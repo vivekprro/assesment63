@@ -1,4 +1,53 @@
 .App {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+
+button {
+  font-size: 12px;
+  font-weight: 600;
+  color: #ffffff;
+  background: #15be53;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover {
+  animation: pulse 1s;
+  animation-timing-function: linear;
+}
+
+button:disabled {
+  background: #15be53;
+  opacity: 0.5;
+  border: none;
+  cursor: no-drop;
+}
+
+button[disabled]:hover {
+  animation: none;
+  animation-timing-function: none;
 }
